@@ -41,3 +41,7 @@ Replace “your-dockerhub-username” with your real Docker Hub username.
 Make sure you have access to your Kubernetes cluster configured and kubectl installed.
 
 This code and instructions will allow you to generate a large number of different exceptions and send them to Sentry for benchmarking, and deploy this process to Kubernetes.
+
+
+
+# https://maciek.land/blog/automatic-releases-with-github-actions

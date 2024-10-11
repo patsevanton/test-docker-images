@@ -6,12 +6,6 @@ on:
   push:
     branches:
       - main
-  workflow_dispatch:
-    inputs:
-      deployed-tag:
-        description: "Deployed tag"
-        required: false
-        default: ""
 
 jobs:
   release:
@@ -100,45 +94,3 @@ jobs:
           branch: main
           commit_message: "release: changelog for ${{ steps.semver.outputs.next }} [skip ci]"
           file_pattern: CHANGELOG.md
-
-      # Some cosmetics, apply output using different variables
-      # if the workflow was triggered manually.
-      - name: Set deployed ref output
-        id: deployed-tag
-        run: |
-          if [ "${{ inputs.deployed-tag }}" != "" ]; then
-              echo "name=${{ inputs.deployed-tag }}" >> $GITHUB_OUTPUT
-          else
-              echo "name=${{ steps.semver.outputs.next }}" >> $GITHUB_OUTPUT
-          fi
-
-      # A bonus, you can ignore that. I like to keep deployments
-      # in separate workflows, and to trigger them automatically
-      # when a release is created. We can dispatch another workflows
-      # thanks to the elevated permissions. By doing this manually
-      # you can call different workflows depending on the context,
-      # and do not worry about thinking which "on" event to use.
-      - name: Trigger production deployment
-        uses: actions/github-script@v6
-        if: ${{ steps.deployed-tag.outputs.name != '' }}
-        with:
-          result-encoding: string
-          script: |
-            github.rest.actions.createWorkflowDispatch({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              workflow_id: 'deploy-to-fly.yml',
-              ref: 'main',
-              inputs: {
-                config: 'production',
-                ref: '${{ steps.deployed-tag.outputs.name }}'
-              }
-            });
-
-      # At the end, I want to have some debug information in the job summary.
-      - name: Add action summary
-        run: |
-          echo "❔ Deployment needed? ${{ inputs.deployed-tag != '' }}" >> $GITHUB_STEP_SUMMARY
-          echo "📃 Deployed tag: ${{ inputs.deployed-tag }}" >> $GITHUB_STEP_SUMMARY
-          echo "⏰ Semver version used as base commit for changelog: ${{ steps.semver.outputs.current }}" >> $GITHUB_STEP_SUMMARY
-          echo "⌛ Semver version used as latest commit for changelog: ${{ steps.semver.outputs.next }}" >> $GITHUB_STEP_SUMMARY

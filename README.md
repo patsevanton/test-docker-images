@@ -23,7 +23,7 @@ Apply Secret:
 
 
 ```
-kubectl apply -f sentry-dsn.yaml
+kubectl apply -f golang-example-dsn.yaml
 ```
 Deployment to Kubernetes:
 
@@ -31,7 +31,7 @@ Apply Deployment:
 
 
 ```
-kubectl apply -f sentry-benchmark.yaml
+kubectl apply -f golang-example.yaml
 ```
 Notes
 Make sure you replace “your-sentry-dsn” with your real DSN.

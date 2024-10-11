@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v1.1.1] - 2024-10-11
+### :bug: Bug Fixes
+- [`9fcabd3`](https://github.com/patsevanton/test-docker-images/commit/9fcabd3c504a6b4562aa7469f0678ca31497cbf2) - use automatic-releases-with-github-actions *(commit by [@patsevanton](https://github.com/patsevanton))*
+
+
 ## [v1.1.0] - 2024-10-11
 ### :sparkles: New Features
 - [`513ff15`](https://github.com/patsevanton/test-docker-images/commit/513ff15763886790401d724a7ad6b16fee1cfa76) - add empty line *(commit by [@patsevanton](https://github.com/patsevanton))*
@@ -12,3 +17,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - [`9c6de4f`](https://github.com/patsevanton/test-docker-images/commit/9c6de4f3e2fcbe87c54deabe6d5d8f227b9fab80) - use automatic-releases-with-github-actions *(commit by [@patsevanton](https://github.com/patsevanton))*
 
 [v1.1.0]: https://github.com/patsevanton/test-docker-images/compare/v1.0.0...v1.1.0
+[v1.1.1]: https://github.com/patsevanton/test-docker-images/compare/v1.1.0...v1.1.1

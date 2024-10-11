@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v1.2.0] - 2024-10-11
+### :sparkles: New Features
+- [`8233124`](https://github.com/patsevanton/test-docker-images/commit/82331248a392aea126d27425a8094d0d4d2511b4) - remove deploy-to-fly *(commit by [@patsevanton](https://github.com/patsevanton))*
+
+
 ## [v1.1.1] - 2024-10-11
 ### :bug: Bug Fixes
 - [`9fcabd3`](https://github.com/patsevanton/test-docker-images/commit/9fcabd3c504a6b4562aa7469f0678ca31497cbf2) - use automatic-releases-with-github-actions *(commit by [@patsevanton](https://github.com/patsevanton))*
@@ -18,3 +23,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 [v1.1.0]: https://github.com/patsevanton/test-docker-images/compare/v1.0.0...v1.1.0
 [v1.1.1]: https://github.com/patsevanton/test-docker-images/compare/v1.1.0...v1.1.1
+[v1.2.0]: https://github.com/patsevanton/test-docker-images/compare/v1.1.1...v1.2.0

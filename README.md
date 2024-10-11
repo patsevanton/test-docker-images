@@ -3,13 +3,13 @@ Create a Docker image and upload to Docker Hub:
 Build a Docker image:
 
 ```
-docker build -t antonpatsev/sentry-benchmark:latest .
+docker build -t antonpatsev/golang-example:latest .
 ```
 Upload the image to Docker Hub:
 
 
 ```
-docker push antonpatsev/sentry-benchmark:latest .
+docker push antonpatsev/golang-example:latest .
 ```
 Creating Kubernetes Secret:
 

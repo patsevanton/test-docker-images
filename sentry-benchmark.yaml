@@ -1,26 +1,26 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: sentry-benchmark
+  name: golang-example
 spec:
   replicas: 4
   selector:
     matchLabels:
-      app: sentry-benchmark
+      app: golang-example
   template:
     metadata:
       labels:
-        app: sentry-benchmark
+        app: golang-example
     spec:
       containers:
-        - name: sentry-benchmark
-          image: antonpatsev/sentry-benchmark:1
+        - name: golang-example
+          image: antonpatsev/golang-example:1
           imagePullPolicy: Always
           env:
             - name: SENTRY_DSN
               valueFrom:
                 secretKeyRef:
-                  name: sentry-dsn
+                  name: golang-example-dsn
                   key: dsn
           ports:
             - containerPort: 8080

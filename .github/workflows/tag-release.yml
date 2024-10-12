@@ -10,7 +10,7 @@ env:
   IMAGE_NAME: ${{ github.repository }}
 
 jobs:
-  build-and-push-image:
+  create-tag-and-release:
     runs-on: ubuntu-latest
 
     permissions:

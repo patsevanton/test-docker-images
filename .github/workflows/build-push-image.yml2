@@ -3,7 +3,7 @@ name: Create and publish a Docker image
 on:
   push:
     tags:
-      - '*'
+      - '**'
 
 env:
   REGISTRY: ghcr.io
@@ -34,6 +34,7 @@ jobs:
           registry: ${{ env.REGISTRY }}
           username: ${{ github.actor }}
           password: ${{ github.token }}
+#          password: ${{ secrets.BUILD_PUSH_TEST_MULTIPLE_DOCKER_IMAGES_TOKEN }}
 
       - name: Extract metadata (tags, labels) for Docker
         id: meta

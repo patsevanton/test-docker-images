@@ -123,7 +123,7 @@ jobs:
         id: build-and-push
         uses: docker/build-push-action@v4
         with:
-          context: "{{defaultContext}}:src"
+          context: .
           push: ${{ github.event_name != 'pull_request' }} # Don't push on PR
           tags: ${{ steps.semver.outputs.next }}
           labels: ${{ steps.meta.outputs.labels }}

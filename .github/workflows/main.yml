@@ -88,7 +88,10 @@ jobs:
         with:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
           tags: |
-            type=semver,pattern={{version}}
+            # tag with version number upon "git push tag"
+            type=match,pattern=v(.*),group=1
+            # set latest tag for default branch
+            type=raw,value=latest,enable={{is_default_branch}}
 
       - name: Build and push Docker image
         id: push

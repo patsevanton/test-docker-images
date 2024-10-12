@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v1.17.0] - 2024-10-12
+### :sparkles: New Features
+- [`2bdc617`](https://github.com/patsevanton/test-docker-images/commit/2bdc6170061cd7fcc8fb094e47711693e81d85f1) - disable Extract Docker metadata *(commit by [@patsevanton](https://github.com/patsevanton))*
+
+
 ## [v1.16.0] - 2024-10-12
 ### :sparkles: New Features
 - [`60480a9`](https://github.com/patsevanton/test-docker-images/commit/60480a95b90532c99892c53f957cc77ec4c11a46) - platforms *(commit by [@patsevanton](https://github.com/patsevanton))*
@@ -108,3 +113,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [v1.14.0]: https://github.com/patsevanton/test-docker-images/compare/v1.13.0...v1.14.0
 [v1.15.0]: https://github.com/patsevanton/test-docker-images/compare/v1.14.0...v1.15.0
 [v1.16.0]: https://github.com/patsevanton/test-docker-images/compare/v1.15.0...v1.16.0
+[v1.17.0]: https://github.com/patsevanton/test-docker-images/compare/v1.16.0...v1.17.0

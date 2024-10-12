@@ -89,7 +89,7 @@ jobs:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
           tags: |
             # tag with version number upon "git push tag"
-            type=match,pattern=v(.*),group=1
+            type=semver,pattern=v{{version}}
             # set latest tag for default branch
             type=raw,value=latest,enable={{is_default_branch}}
 

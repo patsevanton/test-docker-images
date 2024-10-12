@@ -1,0 +1,11 @@
+# Changelog
+All notable changes to this project will be documented in this file.
+
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
+and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+## [1.5.0] - 2024-10-12
+### :sparkles: New Features
+- [`0cb0d97`](https://github.com/patsevanton/test-docker-images/commit/0cb0d97c4a3d087706cdeb396e654b2823f253bf) - fix name *(commit by [@patsevanton](https://github.com/patsevanton))*
+
+[1.5.0]: https://github.com/patsevanton/test-docker-images/compare/1.4.0...1.5.0

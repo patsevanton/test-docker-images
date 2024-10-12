@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v1.29.0] - 2024-10-12
+### :sparkles: New Features
+- [`299b42e`](https://github.com/patsevanton/test-docker-images/commit/299b42ed8a172780024936f332842ec9bd0759d4) - Extract metadata (tags, labels) for Docker *(commit by [@patsevanton](https://github.com/patsevanton))*
+
+
 ## [v1.28.0] - 2024-10-12
 ### :sparkles: New Features
 - [`04715c7`](https://github.com/patsevanton/test-docker-images/commit/04715c791554abb3267fdfb758df0a74bd018fdd) - type semver pattern v version *(commit by [@patsevanton](https://github.com/patsevanton))*
@@ -183,3 +188,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [v1.26.0]: https://github.com/patsevanton/test-docker-images/compare/v1.25.0...v1.26.0
 [v1.27.0]: https://github.com/patsevanton/test-docker-images/compare/v1.26.0...v1.27.0
 [v1.28.0]: https://github.com/patsevanton/test-docker-images/compare/v1.27.0...v1.28.0
+[v1.29.0]: https://github.com/patsevanton/test-docker-images/compare/v1.28.0...v1.29.0

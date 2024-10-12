@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v1.23.0] - 2024-10-12
+### :sparkles: New Features
+- [`997b0ff`](https://github.com/patsevanton/test-docker-images/commit/997b0ffa9b7b2bc2d0c2f2e53225a10bef76987b) - disable Generate artifact attestation *(commit by [@patsevanton](https://github.com/patsevanton))*
+
+
 ## [v1.22.0] - 2024-10-12
 ### :sparkles: New Features
 - [`982eff6`](https://github.com/patsevanton/test-docker-images/commit/982eff6f0ac06dc0c1ef2df6f45026b6ea6b5dff) - run empty pipeline *(commit by [@patsevanton](https://github.com/patsevanton))*
@@ -139,3 +144,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [v1.19.0]: https://github.com/patsevanton/test-docker-images/compare/v1.18.0...v1.19.0
 [v1.21.0]: https://github.com/patsevanton/test-docker-images/compare/v1.20.0...v1.21.0
 [v1.22.0]: https://github.com/patsevanton/test-docker-images/compare/v1.21.0...v1.22.0
+[v1.23.0]: https://github.com/patsevanton/test-docker-images/compare/v1.22.0...v1.23.0

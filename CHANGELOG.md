@@ -4,6 +4,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v1.26.0] - 2024-10-12
+### :sparkles: New Features
+- [`1e141c3`](https://github.com/patsevanton/test-docker-images/commit/1e141c3e503a9ea8e057947ad6092c29d6229b40) - disable type=ref,event=pr *(commit by [@patsevanton](https://github.com/patsevanton))*
+- [`df1a8e4`](https://github.com/patsevanton/test-docker-images/commit/df1a8e4b3f2709e2005baed0956bf205b09a44ed) - disable type ref event pr *(commit by [@patsevanton](https://github.com/patsevanton))*
+- [`d96ad52`](https://github.com/patsevanton/test-docker-images/commit/d96ad523d3b65090bbb0d4cc9fecf3e576fd6511) - remove type ref event pr *(commit by [@patsevanton](https://github.com/patsevanton))*
+
+
 ## [v1.25.0] - 2024-10-12
 ### :sparkles: New Features
 - [`533a68e`](https://github.com/patsevanton/test-docker-images/commit/533a68ee7a7da841903a704caa7c9a69c7cbb568) - remove type=sha *(commit by [@patsevanton](https://github.com/patsevanton))*
@@ -163,3 +170,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [v1.23.1]: https://github.com/patsevanton/test-docker-images/compare/v1.23.0...v1.23.1
 [v1.24.0]: https://github.com/patsevanton/test-docker-images/compare/v1.23.1...v1.24.0
 [v1.25.0]: https://github.com/patsevanton/test-docker-images/compare/v1.24.0...v1.25.0
+[v1.26.0]: https://github.com/patsevanton/test-docker-images/compare/v1.25.0...v1.26.0

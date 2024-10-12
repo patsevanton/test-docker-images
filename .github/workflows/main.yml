@@ -125,7 +125,7 @@ jobs:
         with:
           context: "{{defaultContext}}:src"
           push: ${{ github.event_name != 'pull_request' }} # Don't push on PR
-          tag: ${{ steps.semver.outputs.next }}
+          tags: ${{ steps.semver.outputs.next }}
           labels: ${{ steps.meta.outputs.labels }}
           cache-from: type=gha
           cache-to: type=gha,mode=max

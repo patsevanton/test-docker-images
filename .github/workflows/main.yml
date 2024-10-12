@@ -1,7 +1,5 @@
 name: Create new application release
 
-# We want releases to trigger on pushes to main, and also on manual dispatch,
-# so we can trigger a release manually, mainly for testing or rollbacks.
 on:
   push:
     branches:
@@ -10,10 +8,6 @@ on:
 jobs:
   release:
     runs-on: ubuntu-latest
-    # By default, github jobs GITHUB_TOKEN does not have write access
-    # to the repository, nor can it call other actions through the API.
-    # We need to elevate the permissions to create CHANGELOG changes
-    # in the repository, create tags and call other actions.
     permissions:
       contents: write
       actions: write
@@ -21,11 +15,6 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v3
 
-      # Based on the last tag and commits since main branch
-      # (change the branch as needed), this action will determine
-      # the next semver version. If there are no commits since
-      # the last tag, it will warn (by default it fails)
-      # and not create a new tag.
       - name: Get Next Semver Version
         id: semver
         uses: ietf-tools/semver-action@v1
@@ -34,13 +23,6 @@ jobs:
           branch: main
           noVersionBumpBehavior: warn
 
-      # We will use semver action outputs as a conditional,
-      # we can skip the rest of the job if there are no semver
-      # changes since the last tag. Commits that do not have
-      # a type, i.e. "feat:" or "fix:" will be ignored.
-      # Also, less meaningful types like "chore" or "docs"
-      # will be ignored too. This step can be easily changed
-      # from action to direct API call if you want to customize it.
       - name: Create Tag
         uses: rickstaa/action-create-tag@v1
         if: ${{ steps.semver.outputs.next != '' }}
@@ -49,12 +31,6 @@ jobs:
           tag_exists_error: false
           message: "Automatic tag ${{ steps.semver.outputs.next }}"
 
-      # Based on the commits since the last tag, we will
-      # generate a changelog and commit it to the repository.
-      # You can customize commit types that will be ignored.
-      # We use the default excludes, widened with the "release"
-      # type, I wanted to see them at a glance so they are
-      # copied here.
       - name: Update CHANGELOG
         id: changelog
         uses: requarks/changelog-action@v1
@@ -65,9 +41,6 @@ jobs:
           toTag: ${{ steps.semver.outputs.current }}
           excludeTypes: "chore,ci,docs,style,test,release"
 
-      # Cleaning up, we will use our newly related
-      # tag to create a release. Changelog output
-      # from the previous action is used as a body.
       - name: Create Release
         uses: ncipollo/release-action@v1
         id: release
@@ -81,12 +54,6 @@ jobs:
           body: ${{ steps.changelog.outputs.changes }}
           token: ${{ github.token }}
 
-      # Commit the changelog to the repository. We do it
-      # here to make sure that other actions were successfull.
-      # Also, [skip ci] is a Github Actions specific commit
-      # message, it will prevent the action from triggering
-      # another run, just in case. I won't go into the details
-      # why the action would not trigger anyway.
       - name: Commit CHANGELOG.md
         uses: stefanzweifel/git-auto-commit-action@v4
         if: ${{ steps.semver.outputs.next != '' }}
@@ -106,12 +73,6 @@ jobs:
           registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.BUILD_PUSH_TEST_MULTIPLE_DOCKER_IMAGES_TOKEN }}
-
-#      - name: Extract Docker metadata
-#        id: meta
-#        uses: docker/metadata-action@v5.5.1
-#        with:
-#          images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
 
       - name: Build and push Docker image
         id: build-and-push

@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v1.34.0] - 2024-10-12
+### :sparkles: New Features
+- [`136d547`](https://github.com/patsevanton/test-docker-images/commit/136d547bfbe3e290d4fcfbf26b7cf51c3eed1ffa) - only type semver pattern raw *(commit by [@patsevanton](https://github.com/patsevanton))*
+
+
 ## [v1.33.0] - 2024-10-12
 ### :sparkles: New Features
 - [`5645db5`](https://github.com/patsevanton/test-docker-images/commit/5645db503b060680c79e3aee445e611f7bb8fa08) - type semver pattern raw *(commit by [@patsevanton](https://github.com/patsevanton))*
@@ -213,3 +218,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [v1.31.0]: https://github.com/patsevanton/test-docker-images/compare/v1.30.0...v1.31.0
 [v1.32.0]: https://github.com/patsevanton/test-docker-images/compare/v1.31.0...v1.32.0
 [v1.33.0]: https://github.com/patsevanton/test-docker-images/compare/v1.32.0...v1.33.0
+[v1.34.0]: https://github.com/patsevanton/test-docker-images/compare/v1.33.0...v1.34.0
